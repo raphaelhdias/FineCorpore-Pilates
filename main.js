@@ -87,3 +87,22 @@ testimonialDots.forEach((dot, index) => {
 setInterval(() => {
     updateTestimonials(currentTestimonial + 1);
 }, 8000);
+
+// Google Tag Conversion Tracking
+function trackBooking() {
+    if (typeof gtag === 'function') {
+        gtag('event', 'ads_conversion_Reservar_hor_rio_1', {
+            // <event_parameters>
+        });
+        console.log('Google Tag booking event triggered!');
+    }
+}
+
+function trackContact() {
+    if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17996393390/Zxr-CIv2jpIcEK7XrIVD'
+        });
+        console.log('Google Tag contact event triggered!');
+    }
+}
